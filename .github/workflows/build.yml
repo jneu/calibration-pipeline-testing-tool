@@ -32,7 +32,8 @@ jobs:
       - name: install dependencies
         run: |
           conda install astropy
-          conda install coverage
+          conda install pytest
+          conda install pytest-astropy
 
       - name: run build
         run: |
@@ -61,12 +62,14 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
+          channels: http://ssb.stsci.edu/astroconda
           python-version: '3.7'
 
       - name: install dependencies
         run: |
           conda install astropy
           conda install sphinx
+          conda install stsci_sphinx_theme
 
       - name: run build
         run: |
@@ -96,6 +99,7 @@ jobs:
         run: |
           conda install astropy
           conda install pytest
+          conda install pytest-astropy
 
       - name: run build
         run: |
