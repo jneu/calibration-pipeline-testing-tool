@@ -32,6 +32,7 @@ jobs:
       - name: install dependencies
         run: |
           conda install astropy
+          conda install coverage
 
       - name: run build
         run: |
@@ -64,6 +65,7 @@ jobs:
 
       - name: install dependencies
         run: |
+          conda install astropy
           conda install sphinx
 
       - name: run build
@@ -93,6 +95,7 @@ jobs:
       - name: install dependencies
         run: |
           conda install astropy
+          conda install pytest
 
       - name: run build
         run: |
